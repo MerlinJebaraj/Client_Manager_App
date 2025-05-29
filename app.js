@@ -117,11 +117,11 @@ function addClient(e) {
       insertClientRow(data.name, data.email, data.phone, true);
       saveClientToLocalStorage(data.name, data.email, data.phone);
       document.getElementById('client-form').reset();
-      alert('✅ Client added successfully!');
+      alert(' Client added successfully!');
       window.location.href = 'client_table.html'; 
     })
     .catch(err => {
-      showError('❌ ' + err.message);
+      showError( err.message);
     });
 }
 
