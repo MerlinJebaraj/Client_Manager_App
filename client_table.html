@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Client Manager</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="search-bar"> 
+    <input
+    type="text"
+    id="search"
+    placeholder="🔍 Search clients by name"
+    onkeyup="filterClients()"
+  />
+</div>
+  
+    <!-- Client Table -->
+   
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="client-table-body">
+        <div id="loader" style="text-align: center; color: #555; display: none;">
+            Loading clients...
+         </div>
+        
+        <!-- Clients will appear here -->
+      </tbody>
+    </table><br>
+    <br />
+<a href="client_form.html" id="add-client-link">Add Client</a>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
